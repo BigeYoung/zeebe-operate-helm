@@ -19,5 +19,6 @@ spec:
           - path: {{ .Values.ingress.path }}
             backend:
               serviceName: {{ include "zeebe-operate.fullname" . }}
+              serviceType: NodePort
               servicePort: 80
 {{- end }}
